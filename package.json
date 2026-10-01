@@ -3,8 +3,14 @@
   "version": "1.0.0",
   "description": "Playwright E2E tests with AI Capabilities incl MCP",
   "main": "index.js",
-  "scripts": {},
-  "keywords": [],
+  "scripts": {
+    "demo:chromium": "npx playwright test tests/demo/mytest.spec.ts --project chromium --headed"
+  },
+  "keywords": [
+    "playwright",
+    "playwright-e2e-tests",
+    "playwright mcp"
+  ],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
