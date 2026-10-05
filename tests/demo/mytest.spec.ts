@@ -10,3 +10,10 @@ test("Should load home page with correct title", async ({ page }) => {
     // Assert header text
     await expect(page.locator('//h1')).toHaveText('CURA Healthcare Service')
 });
+
+test("basic test", async ({ page }) => {
+    // Go to the home page
+    await page.goto("https://katalon-demo-cura.herokuapp.com/");
+    // Assert if the title is correct
+    await expect(page).toHaveTitle("CURA Healthcare Service");
+});

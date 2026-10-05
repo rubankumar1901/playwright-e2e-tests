@@ -4,7 +4,8 @@
   "description": "Playwright E2E tests with AI Capabilities incl MCP",
   "main": "index.js",
   "scripts": {
-    "demo:chromium": "npx playwright test tests/demo/mytest.spec.ts --project chromium --headed"
+    "demo:chromium": "npx playwright test tests/demo/mytest.spec.ts --project chromium --headed",
+    "functional:chromium": "npx playwright test tests/functional/login.spec.ts --project chromium --headed"
   },
   "keywords": [
     "playwright",
