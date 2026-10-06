@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "demo:chromium": "npx playwright test tests/demo/mytest.spec.ts --project chromium --headed",
-    "functional:chromium": "npx playwright test tests/functional/login.spec.ts --project chromium --headed"
+    "functional:chromium": "npx playwright test tests/functional/login.spec.ts --project chromium --headed",
+    "login": "npx playwright test tests/functional/Login.spec.ts --headed"
   },
   "keywords": [
     "playwright",
