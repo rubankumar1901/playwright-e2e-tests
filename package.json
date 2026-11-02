@@ -4,6 +4,7 @@
   "description": "Playwright E2E tests with AI Capabilities incl MCP",
   "main": "index.js",
   "scripts": {
+    "demo:global": "npx playwright test tests/functional/Login.spec.ts",
     "demo:chromium": "npx playwright test tests/demo/mytest.spec.ts --project chromium --headed",
     "demo": "npx playwright test tests/demo/mytest.spec.ts --headed",
     "functional": "npx playwright test tests/functional/make.appointment.spec.ts --headed",
@@ -20,6 +21,8 @@
   "type": "commonjs",
   "devDependencies": {
     "@playwright/test": "^1.63.0",
-    "@types/node": "^26.6.3"
+    "@types/node": "^26.6.3",
+    "allure-playwright": "^3.14.0",
+    "dotenv": "^18.0.9"
   }
 }
