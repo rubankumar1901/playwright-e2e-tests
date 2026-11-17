@@ -1,4 +1,4 @@
-import { test, expect } from "@playwright/test";
+import { test, expect, devices } from "@playwright/test";
 
 test("Should load home page with correct title", async ({ page }) => {
     // Go to the home page
@@ -26,4 +26,8 @@ test.only("Demo Locators", async ({ page }) => {
     let makeappmtBtn = page.getByRole("link", {name: "make appointment"});
     //console.log(`>> The type of the loactor: ${typeof makeappmtBtn}, The value of the locator: ${JSON.stringify(makeappmtBtn)}`);
     await page.getByRole('heading', { name: 'We Care About Your Health' }).click();
+});
+
+test.only("Should demo devices", async ({ page }, testInfo) => {
+    console.log(`>> The list of devices: ${Object.keys(devices)}`);
 });
