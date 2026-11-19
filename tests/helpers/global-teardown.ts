@@ -24,4 +24,4 @@ export default async function globalTeardown(config: FullConfig) {
     }
 
     console.log("--- TEARDOWN PROCESS COMPLETE ---");
-}
+ }

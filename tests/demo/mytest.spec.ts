@@ -17,7 +17,7 @@ test("basic test", {tag: "@smoke"}, async ({ page }, testInfo) => {
     await page.locator("//h1").click();
 });
 
-test.only("Demo Locators", async ({ page }) => {
+test("Demo Locators", async ({ page }) => {
 
     // Go to the home page
     await page.goto("https://katalon-demo-cura.herokuapp.com/");
@@ -28,6 +28,14 @@ test.only("Demo Locators", async ({ page }) => {
     await page.getByRole('heading', { name: 'We Care About Your Health' }).click();
 });
 
-test.only("Should demo devices", async ({ page }, testInfo) => {
+test("Should demo devices", async ({ page }, testInfo) => {
     console.log(`>> The list of devices: ${Object.keys(devices)}`);
+});
+
+test("Should demo parallel execution 1", {tag: '@demo'}, async ({ page }, testInfo) => {
+    await page.goto("https://katalon-demo-cura.herokuapp.com/");
+});
+
+test("Should demo parallel execution 2", {tag: '@demo'}, async ({ page }, testInfo) => {
+    await page.goto("https://katalon-demo-cura.herokuapp.com/");
 });
